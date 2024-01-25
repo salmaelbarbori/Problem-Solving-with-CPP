@@ -1,50 +1,23 @@
 class Solution {
 public:
     int longestCommonSubsequence(string text1, string text2) {
-        int n, m;
-        if (text1.length() > text2.length())
-        {
-            n = text2.length();
-            m = text1.length();
-        }
-        else if (text1.length() < text2.length())
-        {
-            n = text1.length();
-            m = text2.length();
-        }
-        else
-        {
-            n = text2.length();
-            m = text1.length();
-        }
-        int counter = 0;
-        /*for (auto i = 0; i < m; i++)
-        {
-            for (auto j = 0; j < n;j++)
-            {
-                if (text1[i] == text2[j])
-                    counter++;
-            }
-        }*/
-        
-        string longer, shorter;
-        if (text1.length() > text2.length())
-        {
-            longer = text1;
-            shorter = text2;
-        }
-        else 
-        {
-             longer = text2;
-             shorter = text1;
-        }
-        int i = 0;
-        for (auto c:longer)
-        {
-            if (c == shorter[i])
-            {    counter++; i++;}
+        int l1, l2;
+        l1 = text1.length(); l2 = text2.length();
 
+        int arr[l1+1][l2+1];
+        memset(arr, 0, sizeof arr);
+
+        for (auto i = 1; i <= l1;i++)
+        {
+            for(auto j = 1;j <= l2; j++)
+            {
+                if(text1[i - 1] == text2[j-1])
+                    arr[i][j] = arr[i - 1][j - 1] + 1; 
+                else
+                    arr[i][j] = max(arr[i - 1][j], arr[i][j - 1]);
+            }
         }
-        return counter;
+
+        return arr[l1][l2];
     }
 };
