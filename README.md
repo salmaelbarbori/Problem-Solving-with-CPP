@@ -1,6 +1,6 @@
 ## Structure of the repo
 
-<img src="assets\readmepic.png" alt="picture to start your PS journey" title="pic in readme" width="400" height = "400">
+<img src="assets\readmepic.png" alt="picture to start your PS journey" title="pic in readme" width="100%" height = "400">
 
 - Codeforces solutions
 - LeetCode Solutions
