@@ -7,4 +7,11 @@
 - Code ESI Practice
 - README.md
 
+Topics solved
+- Dynamic programming
+- Sorting
+- Linked lists
+- Arrays
+- Maths
+  
 N.B: The folder will be updated regularly(as much as I can!)
